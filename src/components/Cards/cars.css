@@ -1,0 +1,27 @@
+.cards {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+}
+.cards__folded{
+    display: flex;
+    justify-content: space-between;
+    background-color: aquamarine;
+    position: relative;
+}
+.cards__input{
+    background-color: green;
+}
+.cards__text-content{
+    background-color: steelblue;
+}
+.card__delet{
+    position: absolute;
+    right: 0;
+}
+.card__icon-deploy{
+    background-color: rebeccapurple;
+}
+.cards__deploy{
+    display: none;
+}
