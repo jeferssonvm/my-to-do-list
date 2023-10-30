@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 :root {
-  --negro: #393939;
+  --negro: #ffffff;
   /* Tipografía */
   --tipo-principal: Helvetica, Arial, sans-serif;
   --tipo-secundaria: Verdana;
@@ -18,7 +18,7 @@
 }
 /* Reseteamos los margin y paddings de todas las etiquetas */
 * {
-  margin: 0;
+  margin: 0px;
   padding: 0;
   border: 0;
   -webkit-box-sizing: border-box;
@@ -127,9 +127,14 @@ body {
 
 
 .App {
-  text-align: center;
-  background-color: #21212D;
-  width: 100%;
+
+  background-color: #272735;
+  max-width: 610px;
+  margin: auto  ;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 

@@ -1,0 +1,25 @@
+.options-list{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    text-align: center;
+    background-color: #272735;
+}
+.options-list__element{
+    flex: 1;
+    writing-mode: horizontal-tb;
+}
+.options-list__element:nth-child(1){
+    border-inline-start: 1px solid rgb(113, 112, 112);
+}
+.options-list__element:nth-child(2){
+    border-inline: 1px solid rgb(113, 112, 112);
+    
+}
+.options-list__element:nth-child(3){
+    border-inline-end: 1px solid rgb(113, 112, 112);
+}
+.options-list__element:hover{
+    background-color: #49495c;
+    cursor: pointer;
+}

@@ -1,0 +1,32 @@
+.content-input{
+    width: 90%;
+    height: 28px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow:  0 2px 3px 0px rgba(0, 0, 0, 0.16);
+    overflow: hidden;
+}
+.content-input:hover {
+    box-shadow:  0px 2px 8px 7px rgba(0, 0, 0, 0.17);
+}
+.content-input__text{
+        width: 85%;
+        height: 80%;
+        background-color: white;
+}
+.content-input__text:focus,
+.content-input__text:active{
+    border: white;
+}
+
+.content-input__icon{
+    padding: 0;
+}
+.content-input__icon{
+    width: 20px;
+    height: 20px;
+}

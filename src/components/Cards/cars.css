@@ -1,27 +1,90 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
 .cards {
-    background-color: red;
     display: flex;
     flex-direction: column;
+    margin: 10px;
 }
 .cards__folded{
     display: flex;
     justify-content: space-between;
-    background-color: aquamarine;
     position: relative;
+    background-color: #2C2C38;
+    border-radius: 13px;
+}
+
+.cards__folded.active{
+    background-color: #23232b;
+    border-radius: 13px 13px 0px 0px;
 }
 .cards__input{
-    background-color: green;
+    /* flex-grow: 0.5;
+    flex-basis: 10px; */
+    /* margin-inline-start: 10px;
+    margin-inline-end: 0.5%; */
+    margin: 0 3%;
+    cursor: pointer;
+}
+.cards__input:checked + .cards__text-content .cards__title,
+.cards__input:checked + .cards__text-content .cards__date{
+    text-decoration: line-through;
 }
 .cards__text-content{
-    background-color: steelblue;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 3;
 }
+.cards__title{
+    font-size: 20px;
+    color: #FDFEFF;
+    margin-inline-start: 5px;
+    margin-block-start: 8px;
+}
+.cards__date{
+    color: #787B89;
+    font-size: 10px;
+    margin-inline-start: 15px;
+    margin-block-start: 0px;
+}
+
 .card__delet{
+    color: #FDFEFF;
     position: absolute;
-    right: 0;
+    right: -5px;
+    top: -10px;
+    cursor: pointer;
 }
 .card__icon-deploy{
-    background-color: rebeccapurple;
+    margin-inline-end: 10px;
+    flex-grow: 0.5;
+    color: #FDFEFF;
+    cursor: pointer;
+}
+.card__icon-deploy div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .cards__deploy{
-    display: none;
+    height: 0;
+    color: #787B89;
+    background-color: #2C2C38;
+    
+    overflow: hidden;
+    transition: all 300ms;
+
 }
+.cards__deploy.active{
+    height: auto;
+    padding: 12px;
+    background-color: #FDFEFF;
+    border-radius: 0px 0px 10px 10px;
+}
+.cards__input, .card__icon-deploy{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+/* flex-basis: 75%; */
