@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./HeaderApp.css"
+import { ContextTask } from '../../context/ContextTask';
+
 function currentDate (){
     const today = new Date();
     const day = today.getDate();
@@ -13,13 +15,18 @@ function currentDate (){
 }
 
 export const HeaderApp = () => {
+  const {listTask, setListTask} = useContext(ContextTask);
+
+  // console.log(listTask.length )
     
+  // console.log(listTask.filter((task)=>task.completed).length)
  
   return (
     <div className='content-text'>
         <p className='content-text__date'>{currentDate()}</p>
         <h1 className='content-text__title'>Lista De Tarea</h1>
-        <h3 className='content-text__subtitle'> 0 de 10 tareas completadas</h3>
+        <h3 className='content-text__subtitle'> {listTask.filter((task)=>task.completed).length} de {listTask.length} tareas completadas</h3>
+        {/*  */}
     </div>
   )
 }

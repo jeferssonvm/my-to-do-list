@@ -15,12 +15,22 @@ export const Cards = () => {
             return task
         })
         setListTask(result)
-    }
+    };
 
     const deletTask =(id) =>{
         const result = listTask.filter((task) => task.id != id )
         setListTask(result)
-    }
+    };
+   const completeTask =(id) =>{
+        const stateComplete = listTask.map((task) => {
+            if(task.id === id){
+                task.completed? task.completed = false:
+                    task.completed = true
+            }
+            return task
+        })
+        setListTask(stateComplete)
+   };
 
   return (
     <>
@@ -29,7 +39,7 @@ export const Cards = () => {
                 return(
                     <div key={task.id} className='cards'>
                         <div className='cards__folded'>
-                            <input className='cards__input' type="checkbox" name="" id="" />
+                            <input className='cards__input' type="checkbox" name="controlled" onChange={()=>completeTask(task.id)} id="" defaultChecked={task.completed}/>
                             <div className='cards__text-content'>
                                 <h2 className='cards__title'>{task.title}</h2>
                                 <h3 className='cards__date'>{task.dueDate}</h3>

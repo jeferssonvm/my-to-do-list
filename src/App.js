@@ -20,7 +20,7 @@ function App() {
       title:'2 taks',
       description: "2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, dicta aliquid voluptates non voluptatum dolore obcaecati ducimus ut eos alias inventore amet sunt sequi provident maiores perspiciatis numquam, quod voluptatibus!",
       descriptionActive:false,
-      completed: false,
+      completed: true,
       dueDate: "2023-05-05"
     },
     {

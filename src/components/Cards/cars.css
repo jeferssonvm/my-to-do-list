@@ -56,6 +56,10 @@
     top: -10px;
     cursor: pointer;
 }
+.card__delet:hover{
+    color: rgb(90, 2, 2);
+
+}
 .card__icon-deploy{
     margin-inline-end: 10px;
     flex-grow: 0.5;
