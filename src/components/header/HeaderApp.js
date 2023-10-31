@@ -26,7 +26,6 @@ export const HeaderApp = () => {
         <p className='content-text__date'>{currentDate()}</p>
         <h1 className='content-text__title'>Lista De Tarea</h1>
         <h3 className='content-text__subtitle'> {listTask.filter((task)=>task.completed).length} de {listTask.length} tareas completadas</h3>
-        {/*  */}
     </div>
   )
 }
