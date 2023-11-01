@@ -4,10 +4,13 @@ import { ContextTask } from '../../context/ContextTask'
 
 export const ContentTask = () => {
   const {listTask, setListTask} =useContext(ContextTask)
-  console.log(listTask)
+  const prueba = e=>{
+    console.log(typeof(e.target.value))
+  }
   return (
     <div>
         <Cards></Cards>
+        <input type="date"  onChange={prueba} name="pruebas" id="" />
     </div>
   )
 }

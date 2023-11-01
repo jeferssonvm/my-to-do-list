@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import "./HeaderApp.css"
 import { ContextTask } from '../../context/ContextTask';
 
@@ -16,16 +16,23 @@ function currentDate (){
 
 export const HeaderApp = () => {
   const {listTask, setListTask} = useContext(ContextTask);
+  const [completedTasks, setCompletedTasks] = useState();
 
-  // console.log(listTask.length )
-    
-  // console.log(listTask.filter((task)=>task.completed).length)
+  useEffect(() =>{
+    //actualizador de tareas completadas
+    setCompletedTasks(listTask.filter((task)=>task.completed).length)
+
+  },[listTask])
+
  
   return (
     <div className='content-text'>
         <p className='content-text__date'>{currentDate()}</p>
         <h1 className='content-text__title'>Lista De Tarea</h1>
-        <h3 className='content-text__subtitle'> {listTask.filter((task)=>task.completed).length} de {listTask.length} tareas completadas</h3>
+        <h3 className='content-text__subtitle'>{
+        ((completedTasks === listTask.length)&&(<p className='content-text__subtitle--completion'>felicidades gran trabajo</p>)
+        )||(`${completedTasks} de ${listTask.length} tareas completadas`)} </h3>
     </div>
   )
 }
+// {completedTasks} de {listTask.length} tareas completadas

@@ -1,8 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import "./cars.css";
 import { ContextTask } from '../../context/ContextTask';
 export const Cards = () => {
     const {listTask, setListTask} =useContext(ContextTask);
+    const [currentDate, seetCurrentDate] = useState()
+    useEffect(() =>{
+        const date = new date ()
+        console.log(date)
+    },[])
+
     const deploy = (id) =>{
         const result = listTask.map((task) => {
             if(task.id == id){
@@ -21,6 +27,7 @@ export const Cards = () => {
         const result = listTask.filter((task) => task.id != id )
         setListTask(result)
     };
+
    const completeTask =(id) =>{
         const stateComplete = listTask.map((task) => {
             if(task.id === id){
@@ -31,7 +38,8 @@ export const Cards = () => {
         })
         setListTask(stateComplete)
    };
-
+   
+   
   return (
     <>
         {

@@ -30,6 +30,14 @@ function App() {
       descriptionActive:false,
       completed: false,
       dueDate: "2023-10-05"
+    },
+    {
+      id:4,
+      title:'soy diferente',
+      description: "3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, dicta aliquid voluptates non voluptatum dolore obcaecati ducimus ut eos alias inventore amet sunt sequi provident maiores perspiciatis numquam, quod voluptatibus!",
+      descriptionActive:false,
+      completed: false,
+      dueDate: "2023-10-05"
     }
   ]
   const [listTask , setListTask] =useState(listaDeTarea)
