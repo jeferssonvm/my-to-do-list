@@ -13,32 +13,32 @@ function App() {
       description: "1Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, dicta aliquid voluptates non voluptatum dolore obcaecati ducimus ut eos alias inventore amet sunt sequi provident maiores perspiciatis numquam, quod voluptatibus!",
       descriptionActive:false,
       completed: false,
-      dueDate: "2023-01-05"
+      dueDate: "2023-11-20"
     },
-    {
-      id:2,
-      title:'2 taks',
-      description: "2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, dicta aliquid voluptates non voluptatum dolore obcaecati ducimus ut eos alias inventore amet sunt sequi provident maiores perspiciatis numquam, quod voluptatibus!",
-      descriptionActive:false,
-      completed: true,
-      dueDate: "2023-05-05"
-    },
-    {
-      id:3,
-      title:'3 taks',
-      description: "3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, dicta aliquid voluptates non voluptatum dolore obcaecati ducimus ut eos alias inventore amet sunt sequi provident maiores perspiciatis numquam, quod voluptatibus!",
-      descriptionActive:false,
-      completed: false,
-      dueDate: "2023-10-05"
-    },
-    {
-      id:4,
-      title:'soy diferente',
-      description: "3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, dicta aliquid voluptates non voluptatum dolore obcaecati ducimus ut eos alias inventore amet sunt sequi provident maiores perspiciatis numquam, quod voluptatibus!",
-      descriptionActive:false,
-      completed: false,
-      dueDate: "2023-10-05"
-    }
+    // {
+    //   id:2,
+    //   title:'2 taks',
+    //   description: "2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, dicta aliquid voluptates non voluptatum dolore obcaecati ducimus ut eos alias inventore amet sunt sequi provident maiores perspiciatis numquam, quod voluptatibus!",
+    //   descriptionActive:false,
+    //   completed: true,
+    //   dueDate: "2023-11-9"
+    // },
+    // {
+    //   id:3,
+    //   title:'3 taks',
+    //   description: "3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, dicta aliquid voluptates non voluptatum dolore obcaecati ducimus ut eos alias inventore amet sunt sequi provident maiores perspiciatis numquam, quod voluptatibus!",
+    //   descriptionActive:false,
+    //   completed: false,
+    //   dueDate: "2023-11-23"
+    // },
+    // {
+    //   id:4,
+    //   title:'soy diferente',
+    //   description: "3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, dicta aliquid voluptates non voluptatum dolore obcaecati ducimus ut eos alias inventore amet sunt sequi provident maiores perspiciatis numquam, quod voluptatibus!",
+    //   descriptionActive:false,
+    //   completed: false,
+    //   dueDate: "2023-10-05"
+    // }
   ]
   const [listTask , setListTask] =useState(listaDeTarea)
   return (

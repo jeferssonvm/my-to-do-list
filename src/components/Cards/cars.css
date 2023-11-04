@@ -48,7 +48,15 @@
     margin-inline-start: 15px;
     margin-block-start: 0px;
 }
-
+.cards__date.red{
+    color: red;
+}
+.cards__date.green{
+    color: green;
+}
+.cards__date.yellow{
+    color: yellow;
+}
 .card__delet{
     color: #FDFEFF;
     position: absolute;

@@ -5,7 +5,7 @@ import { ContextTask } from '../../context/ContextTask'
 export const ContentTask = () => {
   const {listTask, setListTask} =useContext(ContextTask)
   const prueba = e=>{
-    console.log(typeof(e.target.value))
+    console.log(e.target.value)
   }
   return (
     <div>
