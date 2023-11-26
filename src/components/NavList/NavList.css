@@ -23,3 +23,7 @@
     background-color: #49495c;
     cursor: pointer;
 }
+.options-list__element.actives{
+    background-color: #49495c;
+    cursor: pointer;
+}

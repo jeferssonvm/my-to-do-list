@@ -1,0 +1,20 @@
+.content-button{
+    display: flex;
+    justify-content: center ;
+}
+.button-task{
+    background-color: #2C2C38;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 45px;
+    color: #FFFCD1;
+    font-weight: bold;
+    transition: all 0.5s linear 0.2s;
+
+}
+.button-task:hover{
+    rotate: 180deg;
+    transform: scale(1.1);
+    background-color: #46465a;
+}

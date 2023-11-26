@@ -1,20 +1,46 @@
 import React, { useContext, useEffect, useState } from 'react';
-import "./cars.css";
+import "./cards.css";
 import { ContextTask } from '../../context/ContextTask';
 export const Cards = () => {
     const date = new Date();
-    const {listTask, setListTask} =useContext(ContextTask);
+    const {listTask, setListTask} = useContext(ContextTask);
+    const {optionsList, setOptionsList} = useContext(ContextTask);
+    const {optionsListFiltered, setOptionsListFiltered} = useContext(ContextTask);
     const [currentDate, setCurrentDate] = useState(date);
-    
+    // const [notTaskFound, setNotTaskFound] = useState();
 
+    // devolver las listas con los filtros de tareas para hoy y tareas del mes 
+    useEffect(()=>{
+        // Sen enviá una nueva lista con los filtros deseados
+        if(optionsList.generalTasks){
+            setOptionsListFiltered(listTask)
+        }
+        if(optionsList.tasksToday){
+            // Se transforma una fecha en un string y se compara con el valor de la lista NOTA :se suma un 1 porque los mese van de 0 a 11
+            setOptionsListFiltered(listTask.filter((task)=>{
+                if(task.dueDate ==`${currentDate.getFullYear()}-${currentDate.getMonth()+1}-${currentDate.getDate()}`){
+                    return task
+                }
+            } ))
+        }
+        if(optionsList.tasksOfMonth){
+            // Se tranforma en datos tipo fecha luego se adquiere los meses y años para comparar
+            setOptionsListFiltered(listTask.filter((task)=>{
+                const dateTask = new Date (task.dueDate.replaceAll("-","/"))
+                if ( dateTask.getFullYear() === currentDate.getFullYear()){
+                    if(dateTask.getMonth()+1 === currentDate.getMonth()+1 ){
+                        return task;
+                    }
+                }
+            } ))
+        }
+    },[optionsList],[])
+
+// desplegar acordeon de informacion 
     const deploy = (id) =>{
         const result = listTask.map((task) => {
             if(task.id == id){
-                if (!task.descriptionActive){
-                    task.descriptionActive = true;
-                }else{
-                    task.descriptionActive = false;
-                }
+                task.descriptionActive = !task.descriptionActive;
             }
             return task
         })
@@ -22,8 +48,13 @@ export const Cards = () => {
     };
 
     const deletTask =(id) =>{
+        // se elimina la tarea de la lista princiapl
         const result = listTask.filter((task) => task.id != id )
+        // se elimina de la lista filtrad debido a que esta es la que se esta constantemente mostrando en pantalla
+        setOptionsListFiltered(optionsListFiltered.filter((task) => task.id != id ))
         setListTask(result)
+        
+
     };
 
    const completeTask =(id) =>{
@@ -59,12 +90,12 @@ export const Cards = () => {
             return "red"
         }
    }
-   
+
    
   return (
     <>
         {
-            listTask.map((task) =>{
+            optionsListFiltered.map((task) =>{
                 return(
                     <div key={task.id} className='cards'>
                         <div className='cards__folded'>
@@ -86,6 +117,10 @@ export const Cards = () => {
                     </div>
                 )
             })
+        }
+        {
+                        
+
         }
     </>
     

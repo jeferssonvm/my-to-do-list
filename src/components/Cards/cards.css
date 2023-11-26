@@ -65,8 +65,7 @@
     cursor: pointer;
 }
 .card__delet:hover{
-    color: rgb(90, 2, 2);
-
+    color: #565862;
 }
 .card__icon-deploy{
     margin-inline-end: 10px;

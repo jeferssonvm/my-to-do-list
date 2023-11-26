@@ -124,17 +124,50 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #21212D;
 }
+#root{
+  width: 100vw;
+  height: 100vh;
+}
 
+body{
+  position: relative;
 
+}
 .App {
 
   background-color: #272735;
-  max-width: 610px;
+  width: 100vw;
+  height: 100vh;
   margin: auto  ;
   padding: 10px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
+.content-text{
+  
+  flex: 1.5;
+}
+.content-input{
+  
+  flex: 0.5;
+}
+.content-nav{
+  
+  flex: 0.5;
+}
+.content-task{
 
+  flex: 3.5;
+}
+.content-button{
 
+  flex: 0.5;
+}
+@media only screen and (min-width: 425px) {
+  /* For tablets: */
+  .App{
+    margin: 2% auto;
+    max-width: 610px;
+    height: 521px;
+  }
+}
