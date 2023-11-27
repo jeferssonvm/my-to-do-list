@@ -111,9 +111,9 @@ export const Cards = () => {
                                 <div>. . .</div>
                             </div>
                         </div>
-                        <div className={ `cards__deploy ${task.descriptionActive? "active": ""}` }>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis unde esse adipisci! Esse ullam rerum odio aliquam dolorem, aliquid molestias perspiciatis, nobis obcaecati cupiditate repudiandae odit recusandae fugit vero nihil.
-                        </div>
+                        {task.description && <div className={ `cards__deploy ${task.descriptionActive? "active": ""}` }>
+                            {task.description}
+                        </div>}
                     </div>
                 )
             })

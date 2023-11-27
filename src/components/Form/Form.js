@@ -28,6 +28,7 @@ function Form() {
       completed: false,
       dueDate:  e.target.date.value
     }
+    console.log(e.target.description.value)
     setListTask([...listTask, newForm]);
     setOptionsList ({...optionsList,generalTasks:true,tasksToday:false,tasksOfMonth:false})
     setOpenForm(!openForm);
@@ -55,23 +56,3 @@ function Form() {
 
 export{Form}
 
-
-
-// export const Form = () => {
-//   return ReactDOM.createPortal(
-//     <div className='content-form'>
-
-//     </div>,document.getElementById("form__portal")
-//   )
-// }
-
-{/* <h2 className='subtitle'>Agregar tarea</h2>
-<form className='form' action="">
-    <input className='form__input' type="text" required/>
-    <input className='form__date' type="date" name="" id="" />
-    <textarea  className='form__textarea' name="" id="" cols="30" rows="10"></textarea>
-    <div className='form__input'>
-        <input type="submit" value="cancelar" />
-        <input type="submit" value="guardar" />
-    </div>
-</form> */}
