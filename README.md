@@ -1,3 +1,8 @@
+# proyecto de lista de tareas
+
+Proyecto personal con el fin de mejorar e implementar los conocimientos de React.
+En el cual se realizo una aplicación	de lista de tareas la cual tiene funcionalidades como filtros de tiempo, buscador por palabras claves, contenido estilo acordeon y un semáforo que informa que tanto falta para que se venza  una tarea 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
