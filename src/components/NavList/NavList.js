@@ -25,11 +25,17 @@ export const NavList = () => {
     <div className='content-nav'>
         <ul className='options-list'>
             <li onClick={() => listChange("general")} className={`options-list__element ${(optionsList.generalTasks)&&('actives')}`}>
-              <NavLink to={"/Lista-de-tareas"}>Lista de tareas</NavLink></li>
+              <NavLink to={"/projects/Lista-de-tareas"}>Lista de tareas</NavLink></li>
+              {/* servidor local */}
+              {/* <NavLink to={"/Lista-de-tareas"}>Lista de tareas</NavLink></li> */} 
             <li  onClick={() => listChange("today")} className={`options-list__element ${(optionsList.tasksToday)&&('actives')}`}>
-              <NavLink to={"/Tareas-para-hoy"}>Tareas para hoy</NavLink></li>
+              <NavLink to={"/projects/Tareas-para-hoy"}>Tareas para hoy</NavLink></li>
+              {/* servidor local */}
+              {/* <NavLink to={"/Tareas-para-hoy"}>Tareas para hoy</NavLink></li> */}
             <li  onClick={() => listChange("month")} className={`options-list__element ${(optionsList.tasksOfMonth)&&('actives')}`}>
-              <NavLink to={"/Tareas-del-mes"}>Tareas del Mes</NavLink></li>
+              <NavLink to={"/projects/Tareas-del-mes"}>Tareas del Mes</NavLink></li>
+              {/* servidor local */}
+              {/* <NavLink to={"/Tareas-del-mes"}>Tareas del Mes</NavLink></li> */}
         </ul>
     </div>
   )
