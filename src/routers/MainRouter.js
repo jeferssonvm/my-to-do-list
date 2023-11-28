@@ -17,6 +17,7 @@ export const MainRouter = () => {
       <NavList></NavList>
       <Routes>
         <Route path="/" element={<ContentTask></ContentTask>}/>
+        <Route path="/projects/ListaDeTareas/" element={<ContentTask></ContentTask>}/>
         <Route path="/Lista-de-tareas" element={<ContentTask></ContentTask>}/>
         <Route path="/Tareas-para-hoy" element={<ContentTask></ContentTask>}/>
         <Route path="/Tareas-del-mes" element={<ContentTask></ContentTask>}/>
