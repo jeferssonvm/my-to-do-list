@@ -19,8 +19,11 @@ export const MainRouter = () => {
         <Route path="/" element={<ContentTask></ContentTask>}/>
         <Route path="/projects/ListaDeTareas/" element={<ContentTask></ContentTask>}/>
         <Route path="/Lista-de-tareas" element={<ContentTask></ContentTask>}/>
+        <Route path="/projects/Lista-de-tareas" element={<ContentTask></ContentTask>}/>
         <Route path="/Tareas-para-hoy" element={<ContentTask></ContentTask>}/>
+        <Route path="/projects/Tareas-para-hoy" element={<ContentTask></ContentTask>}/>
         <Route path="/Tareas-del-mes" element={<ContentTask></ContentTask>}/>
+        <Route path="/projects/Tareas-del-mes" element={<ContentTask></ContentTask>}/>
         <Route path='*' element={(
             <h1>Error Esta pagina no Existe</h1>
           )}/>
